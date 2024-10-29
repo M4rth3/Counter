@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.Maui.Controls;
 
 namespace Counter.Views
@@ -62,7 +60,7 @@ namespace Counter.Views
                         if (!counters_names.Contains(NameTextBox.Text))
                         {
                             ErrorName.IsVisible = false;
-                            counters_names.Add(NameTextBox.Text);
+                            counters_names.Add(NameTextBox.Text);                            
                             Color color = new Color(r, g, b);
                             var counterView = new CounterView(NameTextBox.Text, startValue, color);
                             MainPageLayout.Children.Add(counterView);

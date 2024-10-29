@@ -1,6 +1,5 @@
 namespace Counter.Views;
 using Counter.Models;
-using System.Diagnostics.Metrics;
 
 public partial class CounterView : ContentView
 {

@@ -14,7 +14,7 @@
             <Label Text="Name:" TextColor="White"/>
             <Entry x:Name="NameTextBox" WidthRequest="200"/>
             <Label x:Name="ErrorName" 
-               Text="Duplicated name" 
+               Text="Duplicated name"
                TextColor="Red" 
                IsVisible="False" />
 
