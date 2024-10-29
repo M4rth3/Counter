@@ -58,11 +58,11 @@ namespace Counter.Views
                     }
                     else
                     {
+                        ErrorColor.IsVisible = false;
                         if (!counters_names.Contains(NameTextBox.Text))
                         {
                             ErrorName.IsVisible = false;
                             counters_names.Add(NameTextBox.Text);
-                            ErrorColor.IsVisible = false;
                             Color color = new Color(r, g, b);
                             var counterView = new CounterView(NameTextBox.Text, startValue, color);
                             MainPageLayout.Children.Add(counterView);
