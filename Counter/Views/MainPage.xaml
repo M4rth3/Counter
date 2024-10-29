@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Counter.Views.MainPage"
+             xmlns:views="clr-namespace:Counter.Views"
+             BackgroundColor="black">
+
+    <ScrollView>
+        <VerticalStackLayout
+            x:Name="MainPageLayout"
+            Padding="30,0"
+            Spacing="25">
+
+            <Label Text="Name:" TextColor="White"/>
+            <Entry x:Name="NameTextBox" WidthRequest="200"/>
+            <Label x:Name="ErrorName" 
+               Text="Duplicated name" 
+               TextColor="Red" 
+               IsVisible="False" />
+
+            <Label Text="Start value:" TextColor="White"/>
+            <Entry x:Name="SValueTextBox" WidthRequest="200"/>
+            <Label x:Name="ErrorNumber" 
+               Text="Must be a integer number" 
+               TextColor="Red" 
+               IsVisible="False" />
+
+            <Label Text="Color (RGB):" TextColor="White"/>
+            <Entry x:Name="RTextBox" WidthRequest="200" Placeholder="R"/>
+            <Entry x:Name="GTextBox" WidthRequest="200" Placeholder="G"/>
+            <Entry x:Name="BTextBox" WidthRequest="200" Placeholder="B"/>
+            <Label x:Name="ErrorColor" 
+               Text="Insert correct values of RGB" 
+               TextColor="Red" 
+               IsVisible="False" />
+
+            <Button
+                x:Name="AddCounterButton"
+                Text="Add next counter" 
+                SemanticProperties.Hint="Dodaje"
+                Clicked="AddCounter"
+                HorizontalOptions="CenterAndExpand" 
+                BackgroundColor="Beige"
+                WidthRequest="500"/>
+            
+            <Label x:Name="ErrorNotAll" 
+                   Text="Complete all data to create a counter" 
+                   TextColor="Red" 
+                   IsVisible="False" />
+
+            <Button
+                x:Name="DeleteLastCounterButton"
+                Text="Delete last counter" 
+                SemanticProperties.Hint="Usuwa"
+                Clicked="DeleteLastCounter"
+                HorizontalOptions="CenterAndExpand" 
+                BackgroundColor="Beige"
+                WidthRequest="500"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

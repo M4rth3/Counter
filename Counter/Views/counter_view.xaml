@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:Counter.Models"
+             x:Class="Counter.Views.CounterView"
+             xmlns:views="clr-namespace:Counter.Views"
+             >
+    <ContentView.BindingContext>
+        <models:Counter_class />
+    </ContentView.BindingContext>
+
+
+    <VerticalStackLayout 
+        Padding="30,0"
+        Spacing="25"
+        x:Name="CounterLayout"
+        BackgroundColor="{Binding color}">
+        <Label
+            x:Name="C_NameLabel"
+            Text="{Binding CounterName}" 
+            SemanticProperties.Hint="Name of counter"
+            HorizontalTextAlignment="Center"
+            TextColor="Beige"
+            FontSize="Header"/>
+        <Label
+            x:Name="C_Label"
+            Text="{Binding CurrValue}" 
+            SemanticProperties.Hint="Counts the number of times you click"
+            HorizontalTextAlignment="Center"
+            TextColor="Beige"
+            FontSize="Header"/>
+
+        <Button
+            x:Name="Counterplus"
+            Text="+" 
+            SemanticProperties.Hint="Dodaje"
+            Clicked="OnCounterClicked"
+            HorizontalOptions="CenterAndExpand" 
+            BackgroundColor="Beige"
+            WidthRequest="500"/>
+
+        <Button
+            x:Name="Counterminus"
+            Text="-" 
+            SemanticProperties.Hint="Odejmuje"
+            Clicked="OnCounterClicked"
+            HorizontalOptions="CenterAndExpand"
+            BackgroundColor="Beige"
+            WidthRequest="500"/>
+        <Button
+            x:Name="DeleteYourself"
+            Text="Delete this counter" 
+            SemanticProperties.Hint="Usuwa się"
+            Clicked="Suicide"
+            HorizontalOptions="CenterAndExpand"
+            BackgroundColor="DarkRed"
+            WidthRequest="250"
+            Margin="20"/>
+    </VerticalStackLayout>
+
+</ContentView>
